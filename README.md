@@ -56,44 +56,44 @@ This repository has the step by step guidance and driver codes for the online fo
     Action=SendMessage&MessageBody=$util.urlEncode($input.body)
 * Deploy the api with stage name as "test"
   
-# 4, AWS Lambda - StartStepFunction:
+# 4, AWS Lambda - start_step_function:
 
 * Create a **lambda function**
 * Give a suitable name under "Function Name"
 * Choose the suitable Runtime: "Python 3.10" and Architecture: "x86_64"
 * Under the "Change default execution role", choose use existing role and give the "LambdaToStepFunction" role that we have created in step 1.
-* In the code section, paste the content of "StartStepFunction.py".
+* In the code section, paste the content of "start_step_function.py".
 * Also Configure the test event. Click on "Configure test event". Choose "Create test event". Give a suitable name and choose "Private". Under the Event JSON, paste the following test event: {
   "idly": "1",
   "poori": "2"
 }
 * Deploy the lambda function
 
-# 5, AWS Lambda - stepFunction-approve-order:
+# 5, AWS Lambda - step_function_approve_order:
 
 * Create a **lambda function**
 * Give a suitable name under "Function Name"
 * Choose the suitable Runtime: "Python 3.10" and Architecture: "x86_64"
 * Under the "Change default execution role", choose use existing role and give the "LambdaToDynamoDB" role that we have created in step 1.
-* In the code section, paste the content of "sf_approve_order.py".
+* In the code section, paste the content of "step_function_approve_order.py".
 * Deploy the lambda function
 
-# 6, AWS Lambda - stepFunction-process-payment:
+# 6, AWS Lambda - step_function_process_payment:
 
 * Create a **lambda function**
 * Give a suitable name under "Function Name"
 * Choose the suitable Runtime: "Python 3.10" and Architecture: "x86_64"
 * Under the "Change default execution role", choose use existing role and give the "LambdaToDynamoDB" role that we have created in step 1.
-* In the code section, paste the content of "sf_process_payment.py".
+* In the code section, paste the content of "step_function_process_payment.py".
 * Deploy the lambda function
 
-# 7, AWS Lambda - stepFunction-ship-order:
+# 7, AWS Lambda - step_function_ship_order:
 
 * Create a **lambda function**
 * Give a suitable name under "Function Name"
 * Choose the suitable Runtime: "Python 3.10" and Architecture: "x86_64"
 * Under the "Change default execution role", choose use existing role and give the "LambdaToDynamoDB" role that we have created in step 1.
-* In the code section, paste the content of "sf_ship_order.py".
+* In the code section, paste the content of "step_function_ship_order.py".
 * Deploy the lambda function
 
 # 8, Configure AWS SNS Topic:
@@ -122,7 +122,7 @@ This repository has the step by step guidance and driver codes for the online fo
 * Paste the updated json content of the step_function_state_machine.json
 * Then click create
 * The required StateMachine tasks will be configured.
-* Copy the above statemachine arn and update the StartStepFunction.py lambda code and Redeploy the StartStepFunction lambda.
+* Copy the above statemachine arn and update the start_step_function.py lambda code and Redeploy the start_step_function lambda.
 
 # Demo: 
 
