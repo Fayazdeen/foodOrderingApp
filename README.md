@@ -68,6 +68,8 @@ This repository has the step by step guidance and driver codes for the online fo
   "poori": "2"
 }
 * Deploy the lambda function
+* Navigate back to AWS SQS queue that was created in step 2, select the "foodOrder" queue and then click on "Lambda Triggers> Configure lambda function trigger"
+* Specify the lambda arn of the start_step_function lambda
 
 # 5, AWS Lambda - step_function_approve_order:
 
