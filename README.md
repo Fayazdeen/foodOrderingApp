@@ -41,7 +41,7 @@ This repository has the step by step guidance and driver codes for the online fo
 * Click on the "Create Method"
 * Enter the following detail
 
-* Method type : Get
+* Method type : POST
 * Integration type: AWS Service
 * AWS Region: Your region
 * AWS service: SQS
